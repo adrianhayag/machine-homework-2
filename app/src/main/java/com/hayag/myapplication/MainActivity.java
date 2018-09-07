@@ -20,18 +20,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         planets.add(new Planets("Name: Mercury \n Diameter: 4,879 km \n Status: Still Part of Solar System", "mercury.jpg"));
-        planets.add(new Planets("Name: Neptune \n Diameter: 49,244 km \n Status: Still Part of Solar System", "neptune.jpg"));
-        planets.add(new Planets("Name: Pluto \n Diameter: 2,377 km \n Status: Not part of Solar System", "pluto.jpg"));
+        planets.add(new Planets("Name: Venus \n Diameter: 12,104 km \n Status: Still Part of Solar System", "venus.jpg"));
+        planets.add(new Planets("Name: Earth \n Diameter: 12,742 km \n Status: Still Part of Solar System", "earth.jpg"));
+        planets.add(new Planets("Name: Mars \n Diameter: 6,779 km \n Status: Still Part of Solar System", "mars.jpg"));
+        planets.add(new Planets("Name: Jupiter \n Diameter: 139,822 km \n Status: Still Part of Solar System", "jupiter.jpg"));
         planets.add(new Planets("Name: Saturn \n Diameter: 116,464 km \n Status: Still Part of Solar System", "saturn.jpg"));
         planets.add(new Planets("Name: Uranus \n Diameter: 50,724 km \n Status: Still Part of Solar System", "uranus.jpg"));
-        planets.add(new Planets("Name: Earth \n Diameter: 12,742 km \n Status: Still Part of Solar System", "earth.jpg"));
-        planets.add(new Planets("Name: Jupiter \n Diameter: 139,822 km \n Status: Still Part of Solar System", "jupiter.jpg"));
-        planets.add(new Planets("Name: Mars \n Diameter: 6,779 km \n Status: Still Part of Solar System", "mars.jpg"));
-        planets.add(new Planets("Name: Venus \n Diameter: 12,104 km \n Status: Still Part of Solar System", "venus.jpg"));
+        planets.add(new Planets("Name: Neptune \n Diameter: 49,244 km \n Status: Still Part of Solar System", "neptune.jpg"));
+        planets.add(new Planets("Name: Pluto \n Diameter: 2,377 km \n Status: Not part of Solar System", "pluto.jpg"));
+
 
         GridView planetsGrid = findViewById(R.id.planet_grid);
         PlanetsAdptr adapter = new PlanetsAdptr(this, R.layout.activity_planets__adapter,planets);
-
         planetsGrid.setAdapter(adapter);
         planetsGrid.setOnItemClickListener(this);
 
